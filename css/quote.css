@@ -6,6 +6,9 @@ html {
 
 body {
   height: 100vh;
+  margin: 0;
+  font-size: 12px;
+  font-family: "Arvo", sans-serif;
 }
 
 *, *::after, *::before {
@@ -13,17 +16,12 @@ body {
 }
 
 .quotes {
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   flex-direction: column;
+  height: inherit;
 }
 @media screen and (max-width: 960px) {
   .quotes {
@@ -40,27 +38,18 @@ body {
   }
 }
 
-body {
-  font-size: 12px;
-  font-family: "Arvo", sans-serif;
-}
-
 blockquote {
-  border: 1px solid #DDD;
   padding: 0.5em 1em 0.5em 1em;
-  border-radius: 0.2em;
   position: relative;
   flex: 1;
   flex-basis: inherit;
   font-size: 1.4em;
   overflow: hidden;
-  -webkit-flex-basis: auto;
-  -moz-flex-basis: auto;
-  flex-basis: auto;
-  -ms-flex-preferred-size: auto;
+  width: 100%;
+  margin: 0;
 }
 blockquote p {
-  font-size: 1.5em;
+  font-size: 3.5em;
   text-indent: 0em;
   margin: 0em 0 0.25em 0;
   line-height: 1.25em;
@@ -86,11 +75,11 @@ blockquote p::after {
   position: absolute;
   right: -0.085em;
   bottom: -0.25em;
-  color: #DDD;
   z-index: -1;
+  color: #eee;
 }
 blockquote footer {
-  font-size: 1em;
+  font-size: 2em;
   line-height: 2.5em;
   font-style: italic;
   text-indent: 1em;
