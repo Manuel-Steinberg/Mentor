@@ -1,0 +1,97 @@
+/* Thanks to Robin Metcalfe: https://codepen.io/solarisedesign/pen/NqJwxG */
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+.quotes {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+@media screen and (max-width: 960px) {
+  .quotes {
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    box-orient: vertical;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-direction: column;
+  }
+}
+
+body {
+  font-size: 12px;
+  font-family: "Arvo", sans-serif;
+}
+
+blockquote {
+  border: 1px solid #DDD;
+  padding: 0.5em 1em 0.5em 1em;
+  border-radius: 0.2em;
+  position: relative;
+  flex: 1;
+  flex-basis: inherit;
+  font-size: 1.4em;
+  overflow: hidden;
+  -webkit-flex-basis: auto;
+  -moz-flex-basis: auto;
+  flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+}
+blockquote p {
+  font-size: 1.5em;
+  text-indent: 0em;
+  margin: 0em 0 0.25em 0;
+  line-height: 1.25em;
+  z-index: 1;
+}
+blockquote p::before {
+  font-family: Georgia;
+  content: "\201C";
+  font-size: 5em;
+  position: relative;
+  left: 0em;
+  top: 0.45em;
+  color: #999;
+}
+blockquote footer::before {
+  content: "\002D\0009";
+  font-style: italic;
+}
+blockquote p::after {
+  font-family: Georgia;
+  content: "\201D";
+  font-size: 16em;
+  position: absolute;
+  right: -0.085em;
+  bottom: -0.25em;
+  color: #DDD;
+  z-index: -1;
+}
+blockquote footer {
+  font-size: 1em;
+  line-height: 2.5em;
+  font-style: italic;
+  text-indent: 1em;
+}
