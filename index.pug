@@ -3,10 +3,9 @@ doctype html
 html
   head
     style
-      include main.css
+      include quote.min.css
+      include main.min.css
     
-    script(src='https://code.jquery.com/jquery-3.4.1.slim.min.js' integrity='sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=' crossorigin='anonymous')
-
   body
 
     include mixin/quote.pug
@@ -146,6 +145,7 @@ html
       +quote('Use technology to keep in touch, share best practice, learn, collaborate, evolve.', 'Gerry McGovern', '')
       +quote('It is not always the people who start out the smartest who end up the smartest.', 'Carol S. Dweck', '')
       +quote('If it cannot be reduced, reused, repaired, rebuilt, refurbished, refinished, resold, recycled or composted, then it should be restricted, redesigned or removed from production.', 'Pete Seeger', '')
+      +quote('Uncaught ReferenceError: success is not defined!', 'AJ', '')
 
     script
-      include main-dist.js 
+      include main.min.js 
