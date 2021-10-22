@@ -1,86 +1,100 @@
 /* Thanks to Robin Metcalfe: https://codepen.io/solarisedesign/pen/NqJwxG */
 
 html {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  height: 100vh;
-  margin: 0;
-  font-size: 12px;
-  font-family: "Arvo", sans-serif;
+    height: 100vh;
+    margin: 0;
+    font-size: 12px;
+    font-family: "Arvo", sans-serif;
 }
 
-*, *::after, *::before {
-  box-sizing: inherit;
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
 }
 
 .quotes {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  flex-direction: column;
-  height: inherit;
-}
-@media screen and (max-width: 960px) {
-  .quotes {
-    -webkit-box-orient: vertical;
-    -moz-box-orient: vertical;
-    box-orient: vertical;
-    -webkit-box-direction: normal;
-    -moz-box-direction: normal;
-    box-direction: normal;
-    -webkit-flex-direction: column;
-    -moz-flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     flex-direction: column;
-    -ms-flex-direction: column;
-  }
+    height: inherit;
+}
+
+@media screen and (max-width: 960px) {
+    .quotes {
+        -webkit-box-orient: vertical;
+        -moz-box-orient: vertical;
+        box-orient: vertical;
+        -webkit-box-direction: normal;
+        -moz-box-direction: normal;
+        box-direction: normal;
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-direction: column;
+    }
 }
 
 blockquote {
-  padding: 0.5em 1em 0.5em 1em;
-  position: relative;
-  flex: 1;
-  flex-basis: inherit;
-  font-size: 1.4em;
-  overflow: hidden;
-  width: 100%;
-  margin: 0;
+    padding: 0.5em 1em 0.5em 1em;
+    position: relative;
+    flex: 1;
+    flex-basis: inherit;
+    font-size: 1.4em;
+    overflow: hidden;
+    width: 100%;
+    margin: 0;
 }
+
 blockquote p {
-  font-size: 3.5em;
-  text-indent: 0em;
-  margin: 0em 0 0.25em 0;
-  line-height: 1.25em;
-  z-index: 1;
+    font-size: 3.5em;
+    text-indent: 0em;
+    margin: 0em 0 0.25em 0;
+    line-height: 1.25em;
+    z-index: 1;
 }
+
+@media screen and (orientation: portrait) {
+    blockquote p {
+        font-size: 2.5em;
+    }
+}
+
 blockquote p::before {
-  font-family: Georgia;
-  content: "\201C";
-  font-size: 5em;
-  position: relative;
-  left: 0em;
-  top: 0.45em;
-  color: #999;
+    font-family: Georgia;
+    content: "\201C";
+    font-size: 5em;
+    position: relative;
+    left: 0em;
+    top: 0.45em;
+    color: #999;
 }
+
 blockquote footer::before {
-  content: "\002D\0009";
-  font-style: italic;
+    content: "\002D\0009";
+    font-style: italic;
 }
+
 blockquote p::after {
-  font-family: Georgia;
-  content: "\201D";
-  font-size: 16em;
-  position: absolute;
-  right: -0.085em;
-  bottom: -0.25em;
-  z-index: -1;
-  color: #eee;
+    font-family: Georgia;
+    content: "\201D";
+    font-size: 16em;
+    position: absolute;
+    right: -0.085em;
+    bottom: -0.25em;
+    z-index: -1;
+    color: #eee;
 }
+
 blockquote footer {
-  font-size: 2em;
-  line-height: 2.5em;
-  font-style: italic;
-  text-indent: 1em;
+    font-size: 2em;
+    line-height: 2.5em;
+    font-style: italic;
+    text-indent: 1em;
 }
