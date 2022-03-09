@@ -2,11 +2,11 @@ doctype html
 
 html(lang='en')
   head
-    title Mentor - Always a quote on hand
+    title Mentor - Always a quote on hand for your mental wellbeing.
 
     meta(charset='utf-8')
     meta(name='viewport' content='width=device-width,initial-scale=1,user-scalable=yes')
-    meta(name='description' content='You need a mentor that always got a wise quote on hand? You´re welcome.')
+    meta(name='description' content='Based on Deep Fake AI, Mentor will not use quantum algorithms to predict the best fitting quote to your current life situation the app was opened.')
 
     link(rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon.png')
     link(rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png')
@@ -15,12 +15,14 @@ html(lang='en')
 
     style
       include quote.min.css
+
+    script(defer type="text/javascript" src="https://api.pirsch.io/pirsch.js" id="pirschjs" data-code="kxqHG3sZ8thgVzZxLXACddxczrSmQyBA")
     
   body
 
     include mixin/quote.pug
     
-    <!-- quote(quote, author, CSS-classes{morning, forenoon, lunch, afternoon, evening, night}) -->
+    //-quote(quote, author, CSS-classes{morning, forenoon, lunch, afternoon, evening, night})
     .quotes(class='ENG')
       +quote('Think about what makes you smile.', 'Mentor', '')
       +quote('What day is today?', 'Mentor', '')
@@ -59,7 +61,7 @@ html(lang='en')
       +quote('Work on your self-confidence.', 'Mentor', '')
       +quote('Learn how to deal with critics.', 'Mentor', '')
       +quote('Have a good & healthy breakfast.', 'Mentor', '')
-      +quote('Excercise in the morning burns more fat.', 'Mentor', '')
+      +quote('Exercise in the morning burns more fat.', 'Mentor', '')
       +quote('Turn off your phone in the evening.', 'Mentor', '')
       +quote('You snooze - you lose.', 'Mentor', '')
       +quote('Dream, Dance, Deliver ... In the end you need to deliver. The faster, the better!', 'Volkert Engelsman', '')
@@ -123,7 +125,7 @@ html(lang='en')
       +quote('Sleep enough.', 'Mentor', '')
       +quote('Slow down.', 'Mentor', '')
       +quote('Be open minded.', 'Mentor', '')
-      +quote('Take risks and take the responsability.', 'Mentor', '')
+      +quote('Take risks and take the responsibility.', 'Mentor', '')
       +quote('Be passionate.', 'Mentor', '')
       +quote('Be humble.', 'Mentor', '')
       +quote('Avoid negative people.', 'Mentor', '')
